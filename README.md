@@ -8,7 +8,7 @@ The Private RAG Copilot enables organizations to extract insights quickly from i
 
 **Owner:** Marco Predovic
 **Version:** 1.0
-**Status:** Week 1 - Project Setup & Planning
+**Status:** Week 1 Complete ✅ | Ready for Week 2 - Ingestion Pipeline
 
 ---
 
@@ -71,35 +71,68 @@ Document Upload → Text Splitter → Embeddings → Vector DB
 
 ---
 
-## Week 1 Checklist
+## Week 1 Checklist ✅ COMPLETE
 
 ### Repository Setup
 - [x] Initialize Git repository
 - [x] Create folder structure
 - [x] Add core documentation (README, PRD, ROADMAP, DECISIONS)
-- [ ] Set up .gitignore for Python/Node.js
-- [ ] Create initial commit
-- [ ] Push to GitHub
+- [x] Set up .gitignore for Python/Node.js
+- [x] Create initial commit
+- [x] Push to GitHub
 
 ### Environment Setup
-- [ ] Set up Python virtual environment
-- [ ] Install core dependencies (LangChain, FastAPI, OpenAI)
-- [ ] Set up Node.js/npm for frontend
-- [ ] Configure environment variables template (.env.example)
-- [ ] Document setup instructions
+- [x] Set up Python backend structure and modules
+- [x] Create requirements.txt with core dependencies (LangChain, FastAPI, OpenAI)
+- [x] Set up Next.js/TypeScript frontend project
+- [x] Configure environment variables template (.env.example for both backend and frontend)
+- [x] Document setup instructions (comprehensive READMEs)
 
 ### Planning & Design
-- [ ] Define success metrics and tracking method
-- [ ] Create initial synthetic document dataset
-- [ ] Design vector DB schema
-- [ ] Define API endpoints structure
-- [ ] Set up project management (issues, milestones)
+- [x] Define success metrics and tracking method (in PRD and ROADMAP)
+- [x] Create initial synthetic document dataset (3 realistic documents)
+- [x] Design vector DB schema (PostgreSQL with pgvector)
+- [x] Define API endpoints structure (30+ endpoints documented)
+- [x] Document architectural decisions (9 ADRs in DECISIONS.md)
 
-### Team Alignment
-- [ ] Review PRD with stakeholders
-- [ ] Schedule Week 4 internal demo checkpoint
-- [ ] Set up communication channels
-- [ ] Document coding standards and conventions
+### Technical Foundation
+- [x] FastAPI application with health check endpoints
+- [x] Pydantic Settings configuration system (50+ typed settings)
+- [x] Next.js 14 App Router with Tailwind CSS
+- [x] Database schema with tables for documents, chunks, queries, users, metrics
+- [x] Complete API specification document
+
+---
+
+## Week 2 Next Steps - Ingestion Pipeline
+
+Ready to start **Week 2: Document Ingestion Pipeline**
+
+### Key Objectives
+1. Build document processing pipeline
+2. Implement chunking and embedding generation
+3. Set up vector database storage
+4. Test with synthetic documents
+
+### Tasks to Pick Up
+- [ ] Set up Supabase account and run `backend/db_schema.sql`
+- [ ] Configure OpenAI API key in `backend/.env`
+- [ ] Create virtual environment and install dependencies
+- [ ] Implement document loaders (`backend/app/ingestion/loader.py`)
+- [ ] Implement text chunking (`backend/app/ingestion/chunker.py`)
+- [ ] Implement embedding generation (`backend/app/core/embeddings.py`)
+- [ ] Implement vector storage (`backend/app/db/vector_store.py`)
+- [ ] Create ingestion API endpoint (`backend/app/api/ingest.py`)
+- [ ] Test ingestion with synthetic documents from `data/synthetic_docs/`
+- [ ] Verify embeddings are stored correctly in Supabase
+
+### Success Criteria for Week 2
+- ✅ Successfully ingest 10+ synthetic documents
+- ✅ Embeddings stored in vector DB with proper metadata
+- ✅ Processing time < 2 seconds per document
+- ✅ Chunk quality validated manually
+
+See [ROADMAP.md](ROADMAP.md#week-2-ingestion-pipeline) for detailed Week 2 plan.
 
 ---
 
@@ -139,8 +172,8 @@ cp .env.example .env
 
 | Week | Focus | Status |
 |------|-------|--------|
-| Week 1 | Project Setup & Planning | 🔄 In Progress |
-| Week 2 | Ingestion Pipeline | ⏳ Pending |
+| Week 1 | Project Setup & Planning | ✅ Complete |
+| Week 2 | Ingestion Pipeline | 🎯 **Next Up** |
 | Week 3 | Retrieval System | ⏳ Pending |
 | Week 4 | Generation & Prompting | ⏳ Pending |
 | Week 5 | Frontend UI | ⏳ Pending |
